@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1582138830 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\lesson_2_1\circle.cpp
+	"circle.h"
+
+1582139302 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\lesson_2_1\point.cpp
+	"point.h"
+	<cmath>
+
+1582139411 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\lesson_2_1\point.h
+
+1582139459 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\lesson_2_1\circle.h
+	"point.h"
+
