@@ -5,13 +5,16 @@
 class Circle
 
 {
-    private:
-    Point c;
-    double r;
+private:
+    Point _c;
+    double _r;
 
-    public:
-    Circle(Point c, double r):c(c), r(r){}
-    bool contains(const Point &pont);
+public:
+    Circle() {};
+    Circle(const Point &p, double d):_c(p), _r(d) {}
+    bool contains(const Point &p) const {
+        return p.distance(p)<=_r;
+    };
 
 
 };

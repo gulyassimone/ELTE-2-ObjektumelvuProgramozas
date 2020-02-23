@@ -1,12 +1,15 @@
 #pragma once
+#include <cmath>
 
 class Point
 {
-    private:
+public:
     double _x, _y;
 
-    public:
+public:
 
-    Point(int _x=0, int _y=0):x(x), y(y){}
-    double tav(const Point &pont) const;
-    };
+    Point(double a=0, double b=0):_x(a), _y(b) {}
+    double distance(const Point &pont) const{
+        return sqrt(pow((_x-pont._x),2)+pow((_y-pont._y),2));
+    }
+};

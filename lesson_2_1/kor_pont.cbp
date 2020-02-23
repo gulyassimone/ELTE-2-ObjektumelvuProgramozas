@@ -32,12 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="circle.cpp" />
 		<Unit filename="circle.h" />
 		<Unit filename="input.txt" />
 		<Unit filename="kor_pont.cbp" />
 		<Unit filename="main.cpp" />
-		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
 		<Extensions>
 			<code_completion />
