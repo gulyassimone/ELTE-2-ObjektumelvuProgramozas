@@ -57,7 +57,7 @@ int AT::Search( int &key)
 ostream& operator << (std::ostream& s, const AT& at)
 {
     s << "\n >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> \n";
-    s << "Assertive array: \n";
+    s << "Associative array: \n";
     s << "Size: " << at._vec.size() << "\n Datas: \n ";
     for(unsigned i=0; i<at._vec.size(); ++i)
     {
