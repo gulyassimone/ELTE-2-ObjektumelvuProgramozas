@@ -55,7 +55,7 @@ int Menu::getMenuPoint()
     cout << "3. Insert\n";
     cout << "4. Erase\n";
     cout << "5. Search an element\n";
-    cout << "6. Write all datas\n";
+    cout << "6. Write all data\n";
     cout << "\n <------------------------------------------------->\n";
     ostringstream s;
     s<<"Write between 0 and "<<menudb<<"!"<<endl;
@@ -117,10 +117,11 @@ void Menu::erase()
             cerr << "This is a bug. Please contact the programmer! " <<endl;
     }
     if(!incident)
-        cout << "The erased data: " << e << endl;
+        cout << "The erased key: " << e << endl;
 }
 void Menu::search()
 {
+    Item b;
     bool incident=false;
     int e;
     cout<<"Please type a key: ";
@@ -140,7 +141,7 @@ void Menu::search()
             cerr << "This is a bug. Please contact the programmer! " <<endl;
     }
     if(!incident)
-        cout << "The found data: " << e << endl;
+        cout << "The found data: " << b << endl;
 }
 void Menu::write()
 {

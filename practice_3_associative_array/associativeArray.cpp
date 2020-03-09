@@ -24,12 +24,11 @@ void AT::erase( int &key)
     if(!Search(key))
         throw NOT_EXISTS_KEY;
     int ind;
-    ind=Search(key);
-    _vec[ind]=_vec[_vec.size()];
+    ind=searchItem(key);
+    _vec[ind]=_vec[_vec.size()-1];
     _vec.pop_back();
-
 }
-Item AT::searchItem(const int &key) const
+int AT::searchItem(const int &key) const
 {
     int i=0;
     if(_vec.size()==0)
@@ -38,7 +37,7 @@ Item AT::searchItem(const int &key) const
     {
         i++;
     }
-    return _vec[i];
+    return i;
 }
 int AT::Search( int &key)
 {

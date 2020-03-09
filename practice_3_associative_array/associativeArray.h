@@ -3,16 +3,25 @@
 #include <iostream>
 #include "read.hpp"
 
-inline bool valid(int a){return true;}
+inline bool valid(int a)
+{
+    return true;
+}
 struct Item
 {
     int key;
     std::string data;
     Item() {};
     Item(int p, std::string s):key(p),data(s) {}
-    bool operator==(const int key)
+    bool operator==(const int &key)
     {
         return(key==this->key);
+    }
+    Item operator=(Item &item)
+    {
+        item.key=key;
+        item.data=data;
+        return item;
     }
 
     friend std::istream& operator>>(std::istream& s,  Item& e)
@@ -38,7 +47,7 @@ public:
     unsigned int count() const;
     void insert(Item &item);
     void erase(int &key);
-    Item searchItem(const int &key) const;
+    int searchItem(const int &key) const;
 
     friend std::ostream& operator<<(std::ostream& s, const AT& at);
 private:
