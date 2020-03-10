@@ -1,7 +1,11 @@
+//Author:   Gulyás Simone
+//Date:     2020.03.09
+//Title:    N matrix
+
 #pragma once
 #include <vector>
 
-
+//class of N matrices
 class Matrix
 {
 public:

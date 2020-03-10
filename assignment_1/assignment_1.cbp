@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="catch.hpp" />
+		<Unit filename="input.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="matrix.cpp" />
 		<Unit filename="matrix.h" />
