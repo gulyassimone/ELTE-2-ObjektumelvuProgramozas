@@ -3,10 +3,10 @@
 
 using namespace std;
 
-struct Bank
+struct termek
 {
-    string azon;
-    int egy;
+    string termeknev;
+    int ar;
 };
 
 enum Errors { WRONG_FILE_NAME };
