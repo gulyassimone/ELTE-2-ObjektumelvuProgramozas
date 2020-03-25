@@ -131,10 +131,13 @@ istream& operator>> (istream& s, Matrix &m)
             cout << i<< " row " << j << " coloumn";
             if(ind>-1)
             {
-                m._v[ind]=read<int>("data:", "Please type an integer", valid);
+                m._v[ind]=read<int>(" data: ", "Please type an integer", valid);
             }
             else
             {
+                int c;
+                c=read<int>(" data: ", "Please type an integer", valid);
+                if(c!=0)
                 cout << "This elem must be 0 in the N matrix"<< endl;
             }
         }

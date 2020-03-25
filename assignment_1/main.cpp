@@ -18,4 +18,28 @@ int main()
     menu.run();
     return 0;
 }
+#else
+enum status {abnorm, norm};
+bool read(ifstream &f, Matrix &e, Status &st);
+
+bool read(ifstream &f, Matrix &e, Status &st)
+{
+    String line;
+    getline(f,line);
+    if(!f.fail() && line!= "")
+    {
+        int numberOfColumn;
+        Matrix m;
+        st=norm;
+        ifstringstream in(line);
+        in>>numberOfColumn;
+
+        in >>m;
+
+
+
+
+
+    }
+}
 #endif // NORMAL_MODE
