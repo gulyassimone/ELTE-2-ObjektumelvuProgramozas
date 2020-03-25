@@ -1,0 +1,27 @@
+//Author:   Gulyás Simone
+//Date:     2020.03.09
+//Title:    N matrix
+
+#pragma once
+#include <vector>
+#include "read.hpp"
+//class of N matrices
+
+class Matrix
+{
+public:
+    enum matrixError {OVERINDEXED, INVALID_OPERATION, NULLPART};
+
+
+    int write(unsigned i, unsigned j) const;
+    int& operator() (unsigned i, unsigned j);
+    unsigned getSize()const {return _v.size();};
+    void setSize(int a) {_v.resize(a);};
+    Matrix operator+ (const Matrix &m);
+    Matrix operator* (const Matrix &m);
+    friend std::ostream& operator<< (std::ostream& s, const Matrix &m);
+    friend std::istream& operator>> (std::istream& s, const Matrix &m);
+
+private:
+    std::vector<int> _v;
+};

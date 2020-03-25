@@ -1,79 +1,144 @@
+//Author:   Gulyás Simone
+//Date:     2020.03.09
+//Title:    N matrix
 #include <iostream>
 #include "matrix.h"
+#include "read.hpp"
 
 using namespace std;
-
-
-int Matrix::operator() (unsigned i, unsigned j)
+inline bool valid(int a)
 {
-    if(i>=size || i<0)
-        throw INVALID_ROW;
-    if(j>=size || j<0)
-        throw INVALID_COLOUMN;
-    if(j>=0 && j<=Matrix::getSize()-1 && !(i==j && i==0 && i==size-1 && j==0 && j==size-1))
-    {
-        return 0;
-    }
-    bool l=false;
-    while(!l)
-    {
-        if(j==0)
-        {
-            return matrix[i];
-        }
-        else if(j==Matrix::getSize()-1)
-        {
-            return matrix[size+i];
-        }
-        else
-        {
-            return matrix[2*size+i];
-        }
+    return true;
+}
 
+int Matrix::getVectorIndex (const unsigned i, const unsigned j) const
+{
+    if(!(i<Matrix::getSize() && i>=0 && j<Matrix::getSize() && j>=0))
+        throw OVERINDEXED;
+    if(j==0)
+    {
+        return i;
+    }
+    else if(j==Matrix::getSize()-1)
+    {
+        return Matrix::getSize()+i;
+    }
+    else if (i==j)
+    {
+        return 2*Matrix::getSize()+i;
+    }
+    return -1;
+
+}
+int Matrix::write( const unsigned i,  const unsigned j) const
+{
+    int ind = getVectorIndex(i,  j);
+    return ind>-1?_v[ind]:0;
+}
+void Matrix::setElemValue (const unsigned i, const unsigned j, int data)
+{
+
+    int ind = Matrix::getVectorIndex(i, j);
+    if(ind>-1)
+    {
+        _v[ind] = data;
+
+    }
+    else
+    {
+        cout << "This elem must be 0 in N matrix" <<endl;
     }
 }
 
-/*Matrix operator+ (const Matrix &e, const Matrix &m)
+Matrix Matrix::operator+ ( const Matrix &m)
 {
+
+    if(Matrix::getSize()!=m.Matrix::getSize())
+        throw INVALID_OPERATION;
     Matrix sum;
-    if(e.getSize()!=m.getSize()) throw INVALID_OPERATION;
-    for(unsigned i=0; i<e.getSize(); i++)
+    sum.setSize(getSize());
+    for(unsigned i=0; i<Matrix::getSize(); i++)
     {
-        for(unsigned j=0; j<e.getSize(); j++)
+        for(unsigned j=0; j<Matrix::getSize(); j++)
         {
-            sum=e(i,j)+m(i,j);
+            int ind=getVectorIndex(i,j);
+
+            if(ind>-1)
+            {
+                sum._v[ind]=write(i,j)+m.write(i,j);
+            }
         }
     }
     return sum;
 }
 
-Matrix operator* (const Matrix &e, const Matrix &m)
+Matrix Matrix::operator* ( Matrix &m)
 {
+
+    if(Matrix::getSize()!=m.getSize())
+        throw INVALID_OPERATION;
     Matrix mult;
-    if(e.getSize()!=m.getSize()) throw INVALID_OPERATION
-    for(unsigned i=0; i<m.size(); i++))
+    mult.setSize(getSize());
+    for(unsigned i=0; i<Matrix::getSize(); i++)
     {
-        for(unsigned j=0; j<m.getSize(); j++))
+        for(unsigned j=0; j<Matrix::getSize(); j++)
         {
-            for(int j=0; k<m.getSize(); k++))
+            int ind=getVectorIndex(i,j);
+            for(unsigned k=0; k<Matrix::getSize(); k++)
             {
-                mult(i, j)+=e(i,k)*m(k,j)
+                if(ind>-1)
+                {
+                    mult._v[ind]+=write(i,k)*m.write(k,j);
+                }
             }
         }
     }
-}*/
-ostream& operator<< (std::ostream& s, const Matrix &m)
-{
-    s << "<------------------------------------------------>\n";
-    s << "<-------------------N Matrix--------------------->\n";
-    s << "<------------------------------------------------>\n";
+    return mult;
+}
 
-    s<< "Size: " << m.getSize() << "x" << m.getSize() << "\n Data: \n" <<endl;
+ostream& operator<< (ostream& s, const Matrix &m)
+{
+
     for(unsigned i=0; i<m.getSize() ; i++)
+    {
         for(unsigned j=0; j<m.getSize() ; j++)
         {
-            s<< m(i,j);
+            s<< m.write(i,j) << " ";
         }
-    s << "<------------------------------------------------>\n";
+        s<<endl;
+    }
 
+    return s;
+}
+
+
+istream& operator>> (istream& s, Matrix &m)
+{
+    cout << "<------------------------------------------------>"<<endl;
+    cout << "<-------------------N Matrix--------------------->"<<endl;
+    cout << "<------------------------------------------------>"<<endl;
+
+    cout << "Please type the n matrix number of coloumn/row!" << endl;
+    unsigned a;
+    cin >>a;
+    m.setSize(a);
+    cout << "Please type the data" << endl;
+    for(unsigned i=0; i<a ; i++)
+    {
+        for(unsigned j=0; j<a ; j++)
+        {
+            int ind = m.getVectorIndex(i,j);
+            cout << i<< " row " << j << " coloumn";
+            if(ind>-1)
+            {
+                m._v[ind]=read<int>("data:", "Please type an integer", valid);
+            }
+            else
+            {
+                cout << "This elem must be 0 in the N matrix"<< endl;
+            }
+        }
+    }
+    cout << "<------------------------------------------------>\n";
+    return s;
 }

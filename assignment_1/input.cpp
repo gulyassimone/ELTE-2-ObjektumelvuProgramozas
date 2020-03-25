@@ -1,3 +1,7 @@
+//Author:   Gulyás Simone
+//Date:     2020.03.09
+//Title:    N matrix
+
 #include <iostream>
 #include <fstream>
 

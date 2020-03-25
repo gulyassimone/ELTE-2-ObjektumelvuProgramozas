@@ -2,3 +2,34 @@
 1514140574 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-algoritmusokesadatszerkezetek_i\kódok\assignment_1\main.cpp
 	<iostream>
 
+1584521086 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_1\main.cpp
+	<iostream>
+	"menu.h"
+
+1585123587 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_1\menu.h
+	"matrix.h"
+
+1583875163 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_1\read.hpp
+	<iostream>
+	<string>
+
+1585134934 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_1\matrix.h
+	<vector>
+	"read.hpp"
+
+1585136965 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_1\menu.cpp
+	"menu.h"
+	<iostream>
+	<sstream>
+	"read.hpp"
+
+1585038479 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_1\matrix.cpp
+	<iostream>
+	"matrix.h"
+	"read.hpp"
+
+1585136890 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_1\matrix.cpp
+	<iostream>
+	"matrix.h"
+	"read.hpp"
+
