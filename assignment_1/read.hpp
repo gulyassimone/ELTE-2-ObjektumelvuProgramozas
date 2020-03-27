@@ -14,19 +14,19 @@
 //Output:   Item  n    - the value the data that is read
 //Activity:	Reading a data from the keyboard, checking it according to the function valid
 //          if the data is incorrect trying to read it once more
+enum Error {INVALID_INPUT, EMPTY_INPUT};
 template <typename Item>
-Item read( const std::string &msg, const std::string &err, bool valid(Item))
+Item read( std::istream &s, const std::string &msg, bool valid(Item))
 {
     Item n;
-    bool wrong;
-    do{
-        std::cout << msg;
-        std::cin >> n;
-        if((wrong = std::cin.fail())) std::cin.clear();
-        std::string tmp = "";
-        getline(std::cin, tmp);
-        wrong = wrong || tmp.size()!=0 || !valid(n);
-        if(wrong) std::cout << err << std::endl;
-    }while(wrong);
+    std::cerr << msg;
+    s >> n;
+    s.clear();
+    std::string tmp = "";
+    getline(s, tmp);
+    if(tmp.size()==0 )
+        throw EMPTY_INPUT;
+    if(!valid(n))
+        throw INVALID_INPUT;
     return n;
 }

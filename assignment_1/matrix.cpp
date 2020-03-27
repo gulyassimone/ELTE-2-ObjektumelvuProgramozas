@@ -114,34 +114,26 @@ ostream& operator<< (ostream& s, const Matrix &m)
 
 istream& operator>> (istream& s, Matrix &m)
 {
-    cout << "<------------------------------------------------>"<<endl;
-    cout << "<-------------------N Matrix--------------------->"<<endl;
-    cout << "<------------------------------------------------>"<<endl;
-
-    cout << "Please type the n matrix number of coloumn/row!" << endl;
     unsigned a;
-    cin >>a;
+    s >>a;
     m.setSize(a);
-    cout << "Please type the data" << endl;
     for(unsigned i=0; i<a ; i++)
     {
         for(unsigned j=0; j<a ; j++)
         {
             int ind = m.getVectorIndex(i,j);
-            cout << i<< " row " << j << " coloumn";
+            cerr << i<< " row " << j << " coloumn";
             if(ind>-1)
             {
-                m._v[ind]=read<int>(" data: ", "Please type an integer", valid);
+                m._v[ind]=read<int>(s, " data: ", valid);
             }
             else
             {
                 int c;
-                c=read<int>(" data: ", "Please type an integer", valid);
-                if(c!=0)
-                cout << "This elem must be 0 in the N matrix"<< endl;
+                c=read<int>(s," data: ", valid);
+                if(c!=0) throw Matrix::NULLPART;
             }
         }
     }
-    cout << "<------------------------------------------------>\n";
     return s;
 }

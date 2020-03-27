@@ -11,6 +11,14 @@ bool check(int n)
 {
     return 0<=n && n<=MENU_DB;
 }
+bool int_valid(int n)
+{
+    return true;
+}
+bool unsigned_valid(unsigned n)
+{
+    return n>0;
+}
 
 void Menu::run()
 {
@@ -56,20 +64,70 @@ int Menu::menuWrite()
     cout << "6. - Multiply matrixes" << endl << endl;
     cout << "Type a number of menu!"<< endl;
 
-    ostringstream s;
-    s<<"Write between 0 and "<<MENU_DB<<"!"<<endl;
-    string errmsg=s.str();
-    v=read<int>("Your choose: ", errmsg, check);
+    try
+    {
+        v=read<int>(cin,"Your choose: ", check);
+    }
+    catch(Error err)
+    {
+        if(EMPTY_INPUT==err)
+        {
+            cout << "Empty input!"<<endl;
+        }
+        else if(INVALID_INPUT==err)
+        {
+            cout << "Invalid Input."<<endl;
+        }
+        else
+        {
+            cout << "Unhandle exception!"<<endl;
+        }
+    }
     return v;
 }
 void Menu::getElement() const
 {
     int i, j;
 
-    cout << "Give the index of the row: ";
-    cin >> i;
-    cout << "Give the index of the coloumn: ";
-    cin >> j;
+    try
+    {
+        i=read<unsigned>(cin,"row = ", unsigned_valid);
+    }
+    catch(Error err)
+    {
+        if(EMPTY_INPUT==err)
+        {
+            cout << "Empty input!"<<endl;
+        }
+        else if(INVALID_INPUT==err)
+        {
+            cout << "Invalid Input."<<endl;
+        }
+        else
+        {
+            cout << "Unhandle exception!"<<endl;
+        }
+    }
+
+    try
+    {
+        j=read<unsigned>(cin,"coloumn = ", unsigned_valid);
+    }
+    catch(Error err)
+    {
+        if(EMPTY_INPUT==err)
+        {
+            cout << "Empty input!"<<endl;
+        }
+        else if(INVALID_INPUT==err)
+        {
+            cout << "Invalid Input."<<endl;
+        }
+        else
+        {
+            cout << "Unhandle exception!"<<endl;
+        }
+    }
 
     try
     {
@@ -89,13 +147,70 @@ void Menu::getElement() const
 }
 void Menu::setElement()
 {
-    int i, j, e;
-    cout << "Give the index of the row: ";
-    cin >> i;
-    cout << "Give the index of the coloumn: ";
-    cin >> j;
-    cout << "Give the value: ";
-    cin >> e;
+
+    unsigned i, j;
+    int e;
+
+    try
+    {
+        i=read<unsigned>(cin,"row = ", unsigned_valid);
+    }
+    catch(Error err)
+    {
+        if(EMPTY_INPUT==err)
+        {
+            cout << "Empty input!"<<endl;
+        }
+        else if(INVALID_INPUT==err)
+        {
+            cout << "Invalid Input."<<endl;
+        }
+        else
+        {
+            cout << "Unhandle exception!"<<endl;
+        }
+    }
+
+    try
+    {
+        j=read<unsigned>(cin,"coloumn = ", unsigned_valid);
+    }
+    catch(Error err)
+    {
+        if(EMPTY_INPUT==err)
+        {
+            cout << "Empty input!"<<endl;
+        }
+        else if(INVALID_INPUT==err)
+        {
+            cout << "Invalid Input."<<endl;
+        }
+        else
+        {
+            cout << "Unhandle exception!"<<endl;
+        }
+    }
+
+    try
+    {
+        e=read<int>(cin,"coloumn = ", int_valid);
+    }
+    catch(Error err)
+    {
+        if(EMPTY_INPUT==err)
+        {
+            cout << "Empty input!"<<endl;
+        }
+        else if(INVALID_INPUT==err)
+        {
+            cout << "Invalid Input."<<endl;
+        }
+        else
+        {
+            cout << "Unhandle exception!"<<endl;
+        }
+    }
+
     try
     {
         a.setElemValue(i-1,j-1,e);
@@ -106,10 +221,22 @@ void Menu::setElement()
         {
             cout << "Overindexing!"<<endl;
         }
-        else if (ex == Matrix::NULLPART)
+        else
         {
-            cout << "These indexes do not point to the n matrix!"<<endl;
+            cout << "Unhandle exception!"<<endl;
         }
+    }
+    catch (Error err)
+    {
+        if(INVALID_INPUT==err)
+        {
+            cout << "Invalid Input."<<endl;
+        }
+        else if(EMPTY_INPUT==err)
+        {
+            cout << "Empty input!"<<endl;
+        }
+
         else
         {
             cout << "Unhandle exception!"<<endl;
@@ -119,6 +246,7 @@ void Menu::setElement()
 
 void Menu::readMatrix()
 {
+    cerr<<"Give a number of coloumn and data of Matrix!";
     try
     {
         cin >>a;
@@ -133,7 +261,11 @@ void Menu::readMatrix()
         {
             cout << "This elem must be 0" <<endl;
         }
-        cout << "Unhandled exception!" << endl;
+        else
+        {
+            cout << "Unhandled exception!" << endl;
+        }
+
     }
 }
 void Menu::writeMatrix()
@@ -146,9 +278,9 @@ void Menu::sum()
     {
         Matrix b;
 
-        cout << "Give second matrix: " << endl;
+        cerr << "Give second matrix: " << endl;
         cin >> b;
-        cout << "Sum of the matrixes" << endl;
+        cerr << "Sum of the matrixes" << endl;
         cout << "A matrix: \n"<< a  << " + \n" << "b matrix: \n"<< b << " = \n Result: \n" <<a + b << endl;
     }
     catch(Matrix::matrixError ex)
@@ -157,6 +289,10 @@ void Menu::sum()
         {
             cout << "Different sizes! " << endl;
         }
+        else
+        {
+            cout << "Unhandled exception!" << endl;
+        }
     }
 }
 void Menu::mul()
@@ -164,9 +300,9 @@ void Menu::mul()
     try
     {
         Matrix b;
-        cout << "Give the size and the items of the second matrix: "<<endl;
+        cerr << "Give the size and the items of the second matrix: "<<endl;
         cin >> b;
-        cout <<"Multiply of the matrixes: " << endl;
+        cerr <<"Multiply of the matrixes: " << endl;
         cout << "A matrix: \n"<< a  << " * " << "B matrix: \n"<< b << " = \n Result: \n" <<a * b << endl;
     }
     catch(Matrix::matrixError ex)
@@ -174,6 +310,10 @@ void Menu::mul()
         if(ex==Matrix::INVALID_OPERATION)
         {
             cout << "Different sizes! "<< endl;
+        }
+        else
+        {
+            cout << "Unhandled exception!" << endl;
         }
     }
 }

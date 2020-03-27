@@ -13,7 +13,6 @@ class Matrix
 public:
     enum matrixError {OVERINDEXED, INVALID_OPERATION, NULLPART};
 
-    int getVectorIndex (const unsigned i, const unsigned j) const;
     int write( const unsigned i,  const unsigned j) const;
     void setElemValue (const unsigned i, const unsigned j, int data);
     unsigned getSize()const
@@ -31,4 +30,5 @@ public:
 
 private:
     std::vector<int> _v;
+    int getVectorIndex (const unsigned i, const unsigned j) const;
 };
