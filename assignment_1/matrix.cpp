@@ -115,7 +115,7 @@ ostream& operator<< (ostream& s, const Matrix &m)
 istream& operator>> (istream& s, Matrix &m)
 {
     unsigned a;
-    s >>a;
+    a=read<int>(s,"size of matrix: ", valid);;
     m.setSize(a);
     for(unsigned i=0; i<a ; i++)
     {

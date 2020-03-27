@@ -246,7 +246,7 @@ void Menu::setElement()
 
 void Menu::readMatrix()
 {
-    cerr<<"Give a number of coloumn and data of Matrix!";
+    cerr<<"Give a number of coloumn and data of Matrix!" << endl;
     try
     {
         cin >>a;
