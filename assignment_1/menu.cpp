@@ -11,15 +11,14 @@ bool check(int n)
 {
     return 0<=n && n<=MENU_DB;
 }
-bool int_valid(int n)
+inline bool int_valid(int a)
 {
     return true;
 }
-bool unsigned_valid(unsigned n)
+inline bool unsigned_valid(unsigned a)
 {
-    return n>0;
+    return true;
 }
-
 void Menu::run()
 {
     int v;
@@ -64,74 +63,20 @@ int Menu::menuWrite()
     cout << "6. - Multiply matrixes" << endl << endl;
     cout << "Type a number of menu!"<< endl;
 
-    try
-    {
-        v=read<int>(cin,"Your choose: ", check);
-    }
-    catch(Error err)
-    {
-        if(EMPTY_INPUT==err)
-        {
-            cout << "Empty input!"<<endl;
-        }
-        else if(INVALID_INPUT==err)
-        {
-            cout << "Invalid Input."<<endl;
-        }
-        else
-        {
-            cout << "Unhandle exception!"<<endl;
-        }
-    }
+    v=read<int>(cin,"Your choose: ", "Please type an integer from 0 to 6", check);
     return v;
 }
 void Menu::getElement() const
 {
     int i, j;
 
-    try
-    {
-        i=read<unsigned>(cin,"row = ", unsigned_valid);
-    }
-    catch(Error err)
-    {
-        if(EMPTY_INPUT==err)
-        {
-            cout << "Empty input!"<<endl;
-        }
-        else if(INVALID_INPUT==err)
-        {
-            cout << "Invalid Input."<<endl;
-        }
-        else
-        {
-            cout << "Unhandle exception!"<<endl;
-        }
-    }
+    i=read<unsigned>(cin,"row = ","Type an unsigned integer", unsigned_valid);
+    j=read<unsigned>(cin,"coloumn = ","Type an unsigned integer", unsigned_valid);
+
 
     try
     {
-        j=read<unsigned>(cin,"coloumn = ", unsigned_valid);
-    }
-    catch(Error err)
-    {
-        if(EMPTY_INPUT==err)
-        {
-            cout << "Empty input!"<<endl;
-        }
-        else if(INVALID_INPUT==err)
-        {
-            cout << "Invalid Input."<<endl;
-        }
-        else
-        {
-            cout << "Unhandle exception!"<<endl;
-        }
-    }
-
-    try
-    {
-        cout << "a["<<i<<"," <<j<<"}= " << a.write(i-1, j-1) << endl;
+        cout << "a["<<i<<"," <<j<<"]= " << a.write(i-1, j-1) << endl;
     }
     catch(Matrix::matrixError ex)
     {
@@ -151,66 +96,9 @@ void Menu::setElement()
     unsigned i, j;
     int e;
 
-    try
-    {
-        i=read<unsigned>(cin,"row = ", unsigned_valid);
-    }
-    catch(Error err)
-    {
-        if(EMPTY_INPUT==err)
-        {
-            cout << "Empty input!"<<endl;
-        }
-        else if(INVALID_INPUT==err)
-        {
-            cout << "Invalid Input."<<endl;
-        }
-        else
-        {
-            cout << "Unhandle exception!"<<endl;
-        }
-    }
-
-    try
-    {
-        j=read<unsigned>(cin,"coloumn = ", unsigned_valid);
-    }
-    catch(Error err)
-    {
-        if(EMPTY_INPUT==err)
-        {
-            cout << "Empty input!"<<endl;
-        }
-        else if(INVALID_INPUT==err)
-        {
-            cout << "Invalid Input."<<endl;
-        }
-        else
-        {
-            cout << "Unhandle exception!"<<endl;
-        }
-    }
-
-    try
-    {
-        e=read<int>(cin,"coloumn = ", int_valid);
-    }
-    catch(Error err)
-    {
-        if(EMPTY_INPUT==err)
-        {
-            cout << "Empty input!"<<endl;
-        }
-        else if(INVALID_INPUT==err)
-        {
-            cout << "Invalid Input."<<endl;
-        }
-        else
-        {
-            cout << "Unhandle exception!"<<endl;
-        }
-    }
-
+    i=read<unsigned>(cin,"row = ","Type an unsigned integer", unsigned_valid);
+    j=read<unsigned>(cin,"coloumn = ","Type an unsigned integer", unsigned_valid);
+    e=read<int>(cin,"data = ", "Type an integer",int_valid);
     try
     {
         a.setElemValue(i-1,j-1,e);
@@ -221,27 +109,16 @@ void Menu::setElement()
         {
             cout << "Overindexing!"<<endl;
         }
+        else if (ex==Matrix::NULLPART)
+        {
+            cout << "This part must be 0! "<< endl;
+        }
         else
         {
             cout << "Unhandle exception!"<<endl;
         }
     }
-    catch (Error err)
-    {
-        if(INVALID_INPUT==err)
-        {
-            cout << "Invalid Input."<<endl;
-        }
-        else if(EMPTY_INPUT==err)
-        {
-            cout << "Empty input!"<<endl;
-        }
 
-        else
-        {
-            cout << "Unhandle exception!"<<endl;
-        }
-    }
 }
 
 void Menu::readMatrix()
@@ -289,6 +166,10 @@ void Menu::sum()
         {
             cout << "Different sizes! " << endl;
         }
+        else if (ex==Matrix::NULLPART)
+        {
+            cout << "This part must be 0! "<< endl;
+        }
         else
         {
             cout << "Unhandled exception!" << endl;
@@ -310,6 +191,10 @@ void Menu::mul()
         if(ex==Matrix::INVALID_OPERATION)
         {
             cout << "Different sizes! "<< endl;
+        }
+        else if (ex==Matrix::NULLPART)
+        {
+            cout << "This part must be 0! "<< endl;
         }
         else
         {

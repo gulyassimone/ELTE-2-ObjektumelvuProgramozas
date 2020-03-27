@@ -10,6 +10,10 @@ inline bool valid(int a)
 {
     return true;
 }
+inline bool unsig_valid(unsigned a)
+{
+    return true;
+}
 
 int Matrix::getVectorIndex (const unsigned i, const unsigned j) const
 {
@@ -39,15 +43,10 @@ void Matrix::setElemValue (const unsigned i, const unsigned j, int data)
 {
 
     int ind = Matrix::getVectorIndex(i, j);
-    if(ind>-1)
-    {
-        _v[ind] = data;
+    if(!(ind>-1))
+        throw NULLPART;
+    _v[ind] = data;
 
-    }
-    else
-    {
-        cout << "This elem must be 0 in N matrix" <<endl;
-    }
 }
 
 Matrix Matrix::operator+ ( const Matrix &m)
@@ -115,7 +114,7 @@ ostream& operator<< (ostream& s, const Matrix &m)
 istream& operator>> (istream& s, Matrix &m)
 {
     unsigned a;
-    a=read<int>(s,"size of matrix: ", valid);;
+    a=read<unsigned>(s,"size of matrix: ", "Type an integer!", unsig_valid);
     m.setSize(a);
     for(unsigned i=0; i<a ; i++)
     {
@@ -125,13 +124,14 @@ istream& operator>> (istream& s, Matrix &m)
             cerr << i<< " row " << j << " coloumn";
             if(ind>-1)
             {
-                m._v[ind]=read<int>(s, " data: ", valid);
+                m._v[ind]=read<int>(s, " data: ","Type an integer!", valid);
             }
             else
             {
                 int c;
-                c=read<int>(s," data: ", valid);
-                if(c!=0) throw Matrix::NULLPART;
+                c=read<int>(s," data: ","Type an integer!", valid);
+                if(c!=0)
+                    throw Matrix::NULLPART;
             }
         }
     }
