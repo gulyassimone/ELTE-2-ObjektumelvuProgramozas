@@ -32,6 +32,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="catch.hpp" />
+		<Unit filename="enor.cpp" />
+		<Unit filename="enor.h" />
+		<Unit filename="inp0.txt" />
+		<Unit filename="inp1.txt" />
+		<Unit filename="inp2.txt" />
+		<Unit filename="input.txt" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

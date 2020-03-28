@@ -10,7 +10,7 @@
 <while text="&#34;sx=norm &#38;&#38; dx=act.food&#34;" comment="" color="FFFFFF">
  <qWhile>
 
-<instruction text="act.price=act.price+Temp.price" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="act.price=act.price+dx.price" comment="" color="FFFFFF" rotated="0"></instruction>
 <instruction text="&#34;sx,dx,x:read&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
  </qWhile>
 </while>
