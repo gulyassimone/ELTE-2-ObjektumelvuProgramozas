@@ -1,0 +1,4 @@
+Customer Elek product1 2000 product2 20000
+Customer Barbara 2000
+Customer Kata 2000
+Customer Szimi 2000
