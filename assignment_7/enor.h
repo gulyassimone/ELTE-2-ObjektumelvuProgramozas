@@ -11,7 +11,7 @@ class Enor
 {
 public:
     enum Status {norm,abnorm};
-    enum Errors {FILE_NAME_ERROR};
+    enum Errors {FILEERROR};
     Enor(std::string x);
     void first()
     {
