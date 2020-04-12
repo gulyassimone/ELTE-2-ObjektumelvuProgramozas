@@ -32,7 +32,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="angler.cpp" />
+		<Unit filename="angler.h" />
+		<Unit filename="catch.hpp" />
+		<Unit filename="contest.cpp" />
+		<Unit filename="contest.h" />
+		<Unit filename="inp.txt" />
+		<Unit filename="inp0.txt" />
 		<Unit filename="inp1.txt" />
+		<Unit filename="inp2.txt" />
+		<Unit filename="inp3.txt" />
+		<Unit filename="inp4.txt" />
+		<Unit filename="inp5.txt" />
+		<Unit filename="inp6.txt" />
+		<Unit filename="inp7.txt" />
+		<Unit filename="inp8.txt" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
