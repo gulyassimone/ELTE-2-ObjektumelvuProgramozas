@@ -50,7 +50,7 @@ string secondQuestion(string filename)
     }
     return contestIds;
 }
-#define NORMAL_MODE
+//#define NORMAL_MODE
 #ifdef NORMAL_MODE
 int main()
 {
@@ -516,7 +516,6 @@ TEST_CASE("Second task an angler with one catch", "inp7.txt")
     {
         string contestIds = secondQuestion("inp7.txt");
         CHECK("Kiliti0512 Pilicsi0530 "==contestIds);
-        cout << contestIds << endl;
 
     }
     catch(Angler::error err)
@@ -534,7 +533,6 @@ TEST_CASE("Second task an angler with two catch", "inp7.txt")
     {
         string contestIds = secondQuestion("inp7.txt");
         CHECK("Kiliti0512 Pilicsi0530 "==contestIds);
-        cout << contestIds << endl;
     }
     catch(Angler::error err)
     {
@@ -551,7 +549,6 @@ TEST_CASE("Second task more content", "inp7.txt")
     {
         string contestIds = secondQuestion("inp7.txt");
         CHECK("Kiliti0512 Pilicsi0530 "==contestIds);
-        cout << contestIds << endl;
     }
     catch(Angler::error err)
     {

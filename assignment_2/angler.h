@@ -48,8 +48,10 @@ public:
     };
 
 private:
+    enum Status {norm, abnorm};
     std::ifstream _x;
     inputAngler _dx;
+    Status _sx;
     angler _curr;
     bool _end;
 

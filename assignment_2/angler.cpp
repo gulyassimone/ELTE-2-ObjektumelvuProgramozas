@@ -11,7 +11,7 @@ Angler::Angler(string filename)
 
 void Angler::next()
 {
-    _end=false;
+    _sx=norm;
     _curr.isCatfish=false;
     _curr.isNotCatfish=false;
     string line;
@@ -47,7 +47,9 @@ void Angler::next()
     }
     else
     {
-        _end = true;
+        _sx=abnorm;
 
     }
+
+    _end=(_sx==abnorm);
 }

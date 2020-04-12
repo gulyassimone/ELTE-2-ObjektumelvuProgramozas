@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1586721390 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_2\main.cpp
+1586722996 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_2\main.cpp
 	<iostream>
 	"angler.h"
 	"contest.h"
@@ -15,11 +15,11 @@
 	"enor.h"
 	<sstream>
 
-1586721299 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_2\angler.cpp
+1586722885 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_2\angler.cpp
 	"angler.h"
 	<sstream>
 
-1586721299 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_2\angler.h
+1586722885 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_2\angler.h
 	<string>
 	<fstream>
 	<iostream>
