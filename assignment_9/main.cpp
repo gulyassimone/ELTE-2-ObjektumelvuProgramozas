@@ -8,7 +8,17 @@ int main()
 {
     GasStation s(450);
     Customer c("Anna");
-    c.refuel(s,1,10);
-    s.getCash();
+    try
+    {
+        c.refuel(s,7,5);
+        s.getCash();
+    }
+    catch(GasStation::error err)
+    {
+        if(err==GasStation::INVALID_STATION)
+        {
+            cout << "Nem létező töltőállomás."<<endl;
+        }
+    }
     return 0;
 }

@@ -7,6 +7,7 @@
 class GasStation
 {
 public:
+    enum error{INVALID_STATION};
     GasStation(int unitPrice);
     ~GasStation()
     {
@@ -14,11 +15,7 @@ public:
             delete i;
         delete _c;
     }
-    ServiceStation* getServiceStation(int ind)
-    {
-        _c->setServiceStation(_s[ind]);
-        return _s[ind];
-    };
+    ServiceStation* getServiceStation(int ind);
     int getCash() const{return _c->purchase();};
 private:
     std::vector<ServiceStation*> _s;

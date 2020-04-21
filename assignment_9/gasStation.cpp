@@ -11,3 +11,10 @@ GasStation::GasStation(int unitPrice)
         i++;
     }
 }
+ServiceStation* GasStation::getServiceStation(int ind)
+{
+    if(!(ind>0 && ind<8))
+        throw INVALID_STATION;
+    _c->setServiceStation(_s[ind-1]);
+    return _s[ind-1];
+};
