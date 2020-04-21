@@ -7,7 +7,7 @@ class Customer
 {
     public:
         Customer(std::string const &name): _name(name){};
-        void refuel(GasStation &g, int ind, int liter) {g.getServiceStation(ind)->fill(liter);};
+        void refuel(GasStation &g, int ind, int liter) {g.getPump(ind)->fill(liter);};
     private:
         std::string _name;
 };

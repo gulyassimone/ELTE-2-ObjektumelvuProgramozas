@@ -10,7 +10,7 @@ int main()
     Customer c("Anna");
     try
     {
-        c.refuel(s,7,5);
+        c.refuel(s,6,5);
         s.getCash();
     }
     catch(GasStation::error err)

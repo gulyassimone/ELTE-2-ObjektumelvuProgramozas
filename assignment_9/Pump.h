@@ -2,10 +2,10 @@
 #define SERVICESTATION_H
 
 
-class ServiceStation
+class Pump
 {
     public:
-        ServiceStation(): _display(0) {};
+        Pump(): _display(0) {};
         void fill(int liter){_display=liter;};
         void clearFuel() {_display=0;};
         int getDisplay() {return _display;};

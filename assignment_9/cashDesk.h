@@ -1,6 +1,6 @@
 #ifndef CASHDESK_H
 #define CASHDESK_H
-#include "serviceStation.h"
+#include "pump.h"
 
 
 class CashDesk
@@ -8,11 +8,11 @@ class CashDesk
     public:
         CashDesk(int unitPrice): _unitPrice(unitPrice) {};
         int purchase();
-        void setServiceStation(ServiceStation *s) { _s=s;}
+        void setPump(Pump *s) { _s=s;}
     private:
         int _unitPrice;
         int _station;
-        ServiceStation *_s;
+        Pump *_s;
 };
 
 #endif // CASHDESK_H

@@ -2,30 +2,30 @@
 1587495202 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\servicestation.cpp
 	"serviceStation.h"
 
-1587499817 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\servicestation.h
+1587506418 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\servicestation.h
 
 1587504689 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\cashdesk.cpp
 	"cashDesk.h"
 	<iostream>
 
-1587504722 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\cashdesk.h
-	"serviceStation.h"
+1587506730 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\cashdesk.h
+	"pump.h"
 
 1587505529 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\main.cpp
 	<iostream>
 	"gasStation.h"
 	"customer.h"
 
-1587504933 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\gasstation.h
+1587506698 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\gasstation.h
 	<vector>
-	"serviceStation.h"
+	"pump.h"
 	"cashDesk.h"
 
-1587505516 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\customer.h
+1587506589 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\customer.h
 	<string>
 	"gasStation.h"
 
-1587505410 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\gasstation.cpp
+1587506768 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\gasstation.cpp
 	<iostream>
 	"gasStation.h"
 
@@ -34,4 +34,8 @@
 1587505374 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\customer.cpp
 	<iostream>
 	"customer.h"
+
+1587506418 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\pump.h
+
+1587506418 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\pump.h
 
