@@ -7,7 +7,7 @@ class CashDesk
 {
     public:
         CashDesk(int unitPrice): _unitPrice(unitPrice) {};
-        purchase();
+        int purchase();
         void setServiceStation(ServiceStation *s) { _s=s;}
     private:
         int _unitPrice;

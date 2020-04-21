@@ -4,24 +4,30 @@
 
 1587499817 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\servicestation.h
 
-1587501091 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\cashdesk.cpp
+1587504233 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\cashdesk.cpp
 	"cashDesk.h"
 	<iostream>
 
-1587500558 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\cashdesk.h
+1587504722 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\cashdesk.h
 	"serviceStation.h"
 
-1587501820 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\main.cpp
+1587504275 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\main.cpp
 	<iostream>
 	"gasStation.h"
 	"customer.h"
 
-1587501665 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\gasstation.h
+1587504247 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\gasstation.h
 	<vector>
 	"serviceStation.h"
 	"cashDesk.h"
 
-1587501947 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\customer.h
+1587504010 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\customer.h
 	<string>
 	"gasStation.h"
+
+1587503901 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\gasstation.cpp
+	<iostream>
+	"gasStation.h"
+
+1587494753 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_9\desk.h
 

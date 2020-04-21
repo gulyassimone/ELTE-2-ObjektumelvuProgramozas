@@ -2,14 +2,15 @@
 #include <iostream>
 
 using namespace std;
-CashDesk::purchase()
+
+int CashDesk::purchase()
 {
 
     int price;
-     price=_s->getDisplay()*_unitPrice;
+    price=_s->getDisplay()*_unitPrice;
 
-     cout << "Fizetendő összeg: "<<price;
-     _s->clearFuel();
+    cout << "Fizetendő összeg: "<<price;
+    _s->clearFuel();
 
-     return price;
+    return price;
 }

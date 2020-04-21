@@ -35,7 +35,7 @@
 		<Unit filename="cashDesk.cpp" />
 		<Unit filename="cashDesk.h" />
 		<Unit filename="customer.h" />
-		<Unit filename="desk.h" />
+		<Unit filename="gasStation.cpp" />
 		<Unit filename="gasStation.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="serviceStation.h" />

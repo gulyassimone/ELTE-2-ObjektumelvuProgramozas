@@ -6,14 +6,23 @@
 
 class GasStation
 {
-    public:
-        GasStation(int unitPrice): _unitPrice(unitPrice), _c(unitPrice){};
-        ServiceStation* getServiceStation(int ind) {return _s[ind];};
-    private:
-        std::vector<ServiceStation*> _s;
-        int _unitPrice;
-        CashDesk _c;
-        void createServiceStation() { int i=1; while(i<8) _s.push_back(new ServiceStation);};
+public:
+    GasStation(int unitPrice);
+    ~GasStation()
+    {
+        for(ServiceStation *i: _s)
+            delete i;
+        delete _c;
+    }
+    ServiceStation* getServiceStation(int ind)
+    {
+        _c->setServiceStation(_s[ind]);
+        return _s[ind];
+    };
+    int getCash() const{return _c->purchase();};
+private:
+    std::vector<ServiceStation*> _s;
+    CashDesk *_c;
 };
 
 #endif // GASSTATION_H
