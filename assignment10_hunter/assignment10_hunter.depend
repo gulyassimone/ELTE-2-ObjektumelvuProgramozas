@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1588101054 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment10_hunter\main.cpp
+	<iostream>
+	"hunter.h"
+
+1588102600 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment10_hunter\hunter.h
+	<string>
+	<vector>
+	"trophy.h"
+
+1588100318 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment10_hunter\trophy.h
+	<string>
+
+1588100238 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment10_hunter\trophy.cpp
+	"trophy.h"
+
+1588101106 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment10_hunter\hunter.cpp
+	"hunter.h"
+	<iostream>
+	"fstream"
+

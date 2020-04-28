@@ -1,4 +1,5 @@
 #include "hunter.h"
+#include <iostream>
 #include "fstream"
 
 using namespace std;
@@ -6,41 +7,46 @@ using namespace std;
 Hunter::Hunter(string filename)
 {
     ifstream x;
-    if(x.open())throw WRONG_FILENAME
+    x.open(filename);
+    if(x.fail())
+        throw WRONG_FILENAME;
 
     x>>name>>age;
 
-    string spieces, spot, date, special1, special2;
-    int weight;
+    string spieces, spot, date, special1;
+    int weight, special2, special3;
 
     while(x>>spieces>>spot>>date>>weight)
     {
-
         if("lion"==spieces)
         {
             x>>special1;
-            trophies.push_back(new Lion(spot, date, special1));
+            trophies.push_back(new Lion(spieces, spot, date, weight, special1));
         }
         else if("elephant"==spieces)
         {
-            x>>special1>>special2;
-            trophies.push_back(new Elephant(spot, date, special1,special2));
+            x>>special2>>special3;
+            IvoryLength ivoryLength(special2, special3);
+
+            trophies.push_back(new Elephant(spieces, spot, date, weight, ivoryLength));
         }
         else if("rhino"==spieces)
         {
-            x>>special1;
-            trophies.push_back(new Rhino(spot, date, special1));
+            x>>special2;
+            trophies.push_back(new Rhino(spieces, spot, date, weight, special2));
         }
-        else throw UNEXPECTED_SPIECES
-    }
+        else
+            throw UNEXPECTED_SPIECES;
+        }
+        if(x.fail() && !x.eof()) throw UNEXPECTED_DATA;
 }
 
 int Hunter::MaleLionTrophyCount()
 {
-    _count = 0;
+    int _count = 0;
     for(auto i:trophies)
     {
-        if("lion"==i.spieces && "male"==i.getSpecialAttribute)
+        if("lion"==i->getSpieces() && "male"==i->getSpecialAttribute().gender)
         {
             _count++;
         }

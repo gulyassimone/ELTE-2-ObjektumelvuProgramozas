@@ -34,6 +34,12 @@
 		</Compiler>
 		<Unit filename="hunter.cpp" />
 		<Unit filename="hunter.h" />
+		<Unit filename="inp.txt" />
+		<Unit filename="inp0.txt" />
+		<Unit filename="inp1.txt" />
+		<Unit filename="inp2.txt" />
+		<Unit filename="inp3.txt" />
+		<Unit filename="inp4.txt" />
 		<Unit filename="main.cpp" />
 		<Unit filename="trophy.cpp" />
 		<Unit filename="trophy.h" />
