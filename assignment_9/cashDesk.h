@@ -11,7 +11,6 @@ class CashDesk
         void setPump(Pump *s) { _s=s;}
     private:
         int _unitPrice;
-        int _station;
         Pump *_s;
 };
 
