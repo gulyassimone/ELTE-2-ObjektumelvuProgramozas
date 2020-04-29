@@ -13,7 +13,11 @@ public:
     Hunter(std::string filename);
     ~Hunter()
     {
-        for(Trophy* i:trophies)
+        for(Trophy<int>* i:rhinoTrophies)
+            delete i;
+        for(Trophy<std::string>* i:lionTrophies)
+            delete i;
+        for(Trophy<IvoryLength>* i:elephantTrophies)
             delete i;
     }
     int MaleLionTrophyCount();
@@ -24,7 +28,9 @@ public:
 private:
     std::string name;
     int age;
-    std::vector<Trophy*> trophies;
+    std::vector<Trophy<int>*> rhinoTrophies;
+    std::vector<Trophy<std::string>*> lionTrophies;
+    std::vector<Trophy<IvoryLength>*> elephantTrophies;
 
 };
 

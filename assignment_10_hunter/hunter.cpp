@@ -16,24 +16,25 @@ Hunter::Hunter(string filename)
     string spieces, spot, date, special1;
     int weight, special2, special3;
 
+
     while(x>>spieces>>spot>>date>>weight)
     {
         if("lion"==spieces)
         {
             x>>special1;
-            trophies.push_back(new Lion(spieces, spot, date, weight, special1));
+            lionTrophies.push_back(new Lion(spieces, spot, date, weight, special1));
         }
         else if("elephant"==spieces)
         {
             x>>special2>>special3;
             IvoryLength ivoryLength(special2, special3);
 
-            trophies.push_back(new Elephant(spieces, spot, date, weight, ivoryLength));
+            elephantTrophies.push_back(new Elephant(spieces, spot, date, weight, ivoryLength));
         }
         else if("rhino"==spieces)
         {
             x>>special2;
-            trophies.push_back(new Rhino(spieces, spot, date, weight, special2));
+            rhinoTrophies.push_back(new Rhino(spieces, spot, date, weight, special2));
         }
         else
             throw UNEXPECTED_SPIECES;
@@ -44,9 +45,9 @@ Hunter::Hunter(string filename)
 int Hunter::MaleLionTrophyCount()
 {
     int _count = 0;
-    for(auto i:trophies)
+    for(auto i:lionTrophies)
     {
-        if("lion"==i->getSpieces() && "male"==i->getSpecialAttribute().gender)
+        if("male"==i->getSpecialAttribute())
         {
             _count++;
         }

@@ -31,6 +31,7 @@ struct SpecialAttribute
     }
 };
 
+template<typename SpecialAttribute>
 class Trophy
 {
 public:
@@ -38,7 +39,7 @@ public:
     SpecialAttribute getSpecialAttribute()
     {
         return specialAttribute;
-    }
+    };
     std::string getSpieces()
     {
         return spieces;
@@ -48,39 +49,34 @@ protected:
     std::string spot;
     std::string date;
     int weight;
-    SpecialAttribute specialAttribute=SpecialAttribute();
-    Trophy(std::string spieces,std::string spot,std::string date,int weight,IvoryLength specialAttribute );
-    Trophy(std::string spieces,std::string spot,std::string date,int weight,std::string specialAttribute );
-    Trophy(std::string spieces,std::string spot,std::string date,int weight,int specialAttribute );
+    SpecialAttribute specialAttribute;
+    Trophy<SpecialAttribute>(std::string spieces,std::string spot,std::string date,int weight,SpecialAttribute specialAttribute )
+    {
+        this->spieces=spieces;
+        this->spot=spot;
+        this->date=date;
+        this->weight=weight;
+        this->specialAttribute=specialAttribute;
+    };
 }
 ;
 
-class Lion : public Trophy
+class Lion : public Trophy<std::string>
 {
 public:
-    Lion(std::string spieces,std::string spot,std::string date,int weight, std::string specialAttribute):Trophy(spieces,spot,date,weight,specialAttribute)
-    {
-        this->specialAttribute.gender=specialAttribute;
-    };
+    Lion(std::string spieces,std::string spot,std::string date,int weight, std::string specialAttribute):Trophy<std::string>(spieces,spot,date,weight,specialAttribute) {};
 };
 
-class Rhino : public Trophy
+class Rhino : public Trophy<int>
 {
 public:
-    Rhino(std::string spieces, std::string spot, std::string date, int weight, int specialAttribute) : Trophy(spieces, spot, date, weight,specialAttribute)
-    {
-        this->specialAttribute.hornWeight=specialAttribute;
-    }
+    Rhino(std::string spieces, std::string spot, std::string date, int weight, int specialAttribute) : Trophy<int>(spieces, spot, date, weight,specialAttribute) {};
 
 };
 
-class Elephant : public Trophy
+class Elephant : public Trophy<IvoryLength>
 {
 public:
-    Elephant(std::string spieces,std::string spot,std::string date,int weight, IvoryLength specialAttribute):Trophy(spieces,spot,date,weight,specialAttribute)
-    {
-        this->specialAttribute.ivoryLength=specialAttribute;
-    }
-
+    Elephant(std::string spieces,std::string spot,std::string date,int weight, IvoryLength specialAttribute):Trophy<IvoryLength>(spieces,spot,date,weight,specialAttribute) {};
 };
 #endif // TROPHY_H
