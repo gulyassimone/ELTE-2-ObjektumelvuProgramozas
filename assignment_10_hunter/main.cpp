@@ -11,7 +11,7 @@ int main()
     {
 
         Hunter hunter("inp.txt");
-        cout<< hunter.getName() << " vadász " << hunter.MaleLionTrophyCount() << " db oroszlánt ejtett el." << endl;
+        cout<< hunter.getName() << " vadász " << hunter.MaleLionTrophiesCount() << " db oroszlánt ejtett el." << endl;
     }
     catch (Hunter::error err)
     {
@@ -41,7 +41,7 @@ TEST_CASE("empty", "inp0.txt")
     {
 
         Hunter hunter("inp0.txt");
-        CHECK(0==hunter.MaleLionTrophyCount());
+        CHECK(0==hunter.MaleLionTrophiesCount());
     }
     catch (Hunter::error err)
     {
@@ -103,7 +103,7 @@ TEST_CASE("First is a lion", "inp3.txt")
     {
 
         Hunter hunter("inp3.txt");
-        CHECK(1==hunter.MaleLionTrophyCount());
+        CHECK(1==hunter.MaleLionTrophiesCount());
     }
     catch (Hunter::error err)
     {
@@ -127,7 +127,7 @@ TEST_CASE("Last is a lion", "inp4.txt")
     {
 
         Hunter hunter("inp4.txt");
-        CHECK(3==hunter.MaleLionTrophyCount());
+        CHECK(3==hunter.MaleLionTrophiesCount());
     }
     catch (Hunter::error err)
     {
@@ -151,7 +151,7 @@ TEST_CASE("Not exists male lion", "inp5.txt")
     {
 
         Hunter hunter("inp5.txt");
-        CHECK(0==hunter.MaleLionTrophyCount());
+        CHECK(0==hunter.MaleLionTrophiesCount());
     }
     catch (Hunter::error err)
     {

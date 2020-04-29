@@ -42,7 +42,7 @@ Hunter::Hunter(string filename)
         if(x.fail() && !x.eof()) throw UNEXPECTED_DATA;
 }
 
-int Hunter::MaleLionTrophyCount()
+int Hunter::MaleLionTrophiesCount()
 {
     int _count = 0;
     for(auto i:lionTrophies)

@@ -20,7 +20,7 @@ public:
         for(Trophy<IvoryLength>* i:elephantTrophies)
             delete i;
     }
-    int MaleLionTrophyCount();
+    int MaleLionTrophiesCount();
     std::string getName()
     {
         return name;
@@ -31,7 +31,6 @@ private:
     std::vector<Trophy<int>*> rhinoTrophies;
     std::vector<Trophy<std::string>*> lionTrophies;
     std::vector<Trophy<IvoryLength>*> elephantTrophies;
-
 };
 
 #endif // HUNTER_H

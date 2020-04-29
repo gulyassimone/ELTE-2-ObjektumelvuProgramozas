@@ -241,17 +241,17 @@
 	<algorithm>
 	<cassert>
 
-1588160236 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_10_hunter\main.cpp
+1588175289 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_10_hunter\main.cpp
 	<iostream>
 	"hunter.h"
 	"catch.hpp"
 
-1588173905 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_10_hunter\hunter.h
+1588176429 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_10_hunter\hunter.h
 	<string>
 	<vector>
 	"trophy.h"
 
-1588173728 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_10_hunter\trophy.h
+1588176280 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_10_hunter\trophy.h
 	<string>
 
 1588084025 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_10_hunter\catch.hpp
@@ -474,4 +474,9 @@
 	<ctime>
 	<algorithm>
 	<cassert>
+
+1588175244 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_10_hunter\hunter.cpp
+	"hunter.h"
+	<iostream>
+	"fstream"
 

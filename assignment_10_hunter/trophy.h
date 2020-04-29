@@ -18,19 +18,6 @@ struct IvoryLength
     }
 };
 
-struct SpecialAttribute
-{
-    IvoryLength ivoryLength;
-    int hornWeight;
-    std::string gender;
-    SpecialAttribute()
-    {
-        ivoryLength=IvoryLength();
-        hornWeight=0;
-        gender="";
-    }
-};
-
 template<typename SpecialAttribute>
 class Trophy
 {
