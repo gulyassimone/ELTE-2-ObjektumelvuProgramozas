@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1581532548 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\1_lesson_1\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+
