@@ -9,63 +9,42 @@ class Rain;
 class AirStratum
 {
 public:
-    AirStratum();
-//getters
-    std::string getName()
-    {
-        return _name;
-    };
+    virtual ~AirStratum() {};
+    char getName(){return _name;}
+    char getSize(){return _size;}
     bool remaining()
     {
         return _size < 0.5;
-    };
-    virtual AirStratum* change (Else *p) = 0;
-    virtual AirStratum* change (Sunny *p) = 0;
-    virtual AirStratum* change (Rain *p) = 0;
-//setters
-
+    }
+    void changeSize(int e)
+    {
+        _size +=e ;
+    }
 protected:
-    std::string _name;
+    AirStratum (const char ch, int e = 0) :_name(ch), _size(e) {}
+    char _name;
     int _size;
 };
 
 class Oxygen: public AirStratum
 {
 public:
-    Oxygen(int s)
-    {
-        _name = "Oxygen";
-        _size = s;
-    };
-    AirStratum* change (Else *p) override;
-    AirStratum* change (Sunny *p) override;
-    AirStratum* change (Rain *p) override;
+Oxygen(const char ch, int e = 0) : AirStratum(ch,e) {};
+    ~Oxygen() {};
 };
 
 class Ozone: public AirStratum
 {
 public:
-    Ozone(int s)
-    {
-        _name = "Ozone";
-        _size = s;
-    };
-    AirStratum* change (Else *p) override;
-    AirStratum* change (Sunny *p) override;
-    AirStratum* change (Rain *p) override;
+Ozone(const char ch, int e = 0): AirStratum(ch,e) {};
+    ~Ozone() {};
 };
 
 class CarbonDioxide: public AirStratum
 {
 public:
-    CarbonDioxide(int s)
-    {
-        _name = "CarbonDioxide";
-        _size = s;
-    };
-    AirStratum* change (Else *p) override;
-    AirStratum* change (Sunny *p) override;
-    AirStratum* change (Rain *p) override;
+CarbonDioxide(const char ch, int e = 0) : AirStratum(ch,e) {};
+    ~CarbonDioxide() {};
 };
 
 #endif // AIRSTRATUM_H

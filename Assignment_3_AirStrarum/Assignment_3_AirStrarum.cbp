@@ -32,7 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="airStratum.cpp" />
 		<Unit filename="airStratum.h" />
 		<Unit filename="input.txt" />
 		<Unit filename="main.cpp" />

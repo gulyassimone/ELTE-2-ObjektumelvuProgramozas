@@ -1,14 +1,21 @@
 # depslib dependency file v1.0
-1589027981 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_3_airstrarum\airstratum.cpp
+1589214892 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_3_airstrarum\airstratum.cpp
 	"airStratum.h"
 
-1589031090 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_3_airstrarum\airstratum.h
+1589226104 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_3_airstrarum\airstratum.h
 	<iostream>
 
-1589027948 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_3_airstrarum\weather.cpp
+1589229176 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_3_airstrarum\weather.cpp
 	"weather.h"
 
-1589031090 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_3_airstrarum\weather.h
+1589225877 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_3_airstrarum\weather.h
 	<iostream>
 	"airStratum.h"
+
+1589223557 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_3_airstrarum\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"airStratum.h"
+	"weather.h"
 
