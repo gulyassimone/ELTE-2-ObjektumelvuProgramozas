@@ -33,6 +33,15 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="airStratum.h" />
+		<Unit filename="inp0.txt" />
+		<Unit filename="inp1.txt" />
+		<Unit filename="inp2.txt" />
+		<Unit filename="inp3.txt" />
+		<Unit filename="inp4.txt" />
+		<Unit filename="inp5.txt" />
+		<Unit filename="inp6.txt" />
+		<Unit filename="inp7.txt" />
+		<Unit filename="inp9.txt" />
 		<Unit filename="input.txt" />
 		<Unit filename="main.cpp" />
 		<Unit filename="weather.cpp" />

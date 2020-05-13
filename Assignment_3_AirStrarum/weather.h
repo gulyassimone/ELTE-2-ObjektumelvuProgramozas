@@ -1,55 +1,65 @@
 #ifndef WEATHER_H
 #define WEATHER_H
 #include <iostream>
-#include "airStratum.h"
+#include <vector>
 
 class Oxygen;
 class Ozone;
 class CarbonDioxide;
+class AirStratum;
 
 class Weather
 {
 public:
+    virtual char getName() {return _name;}
     virtual ~Weather() {}
-    virtual Weather* transmute(Oxygen* oxygen) = 0;
-    virtual Weather* transmute(Ozone* ozone) = 0;
-    virtual Weather* transmute(CarbonDioxide* carbonDioxide) = 0;
+    virtual Weather* change(Oxygen* oxygen, bool &l,unsigned i, std::vector<AirStratum*> &airStratum) = 0;
+    virtual Weather* change(Ozone* ozone,bool &l,unsigned i,std::vector<AirStratum*> &airStratum) = 0;
+    virtual Weather* change(CarbonDioxide* carbonDioxide,bool &l,unsigned i,std::vector<AirStratum*> &airStratum) = 0;
+protected:
+    char _name;
 };
 class Else: public Weather
 {
 public:
+    char getName() override {return _name;} ;
     static Else* instance();
-    virtual Else* transmute(Oxygen* oxygen) override;
-    virtual Else* transmute(Ozone* ozone) override;
-    virtual Else* transmute(CarbonDioxide* carbonDioxide) override;
+    Else* change(Oxygen* oxygen,bool &l,unsigned i, std::vector<AirStratum*> &airStratum) override;
+    Else* change(Ozone* ozone,bool &l,unsigned i, std::vector<AirStratum*> &airStratum) override;
+    Else* change(CarbonDioxide* carbonDioxide,bool &l,unsigned i,std::vector<AirStratum*> &airStratum) override;
     static void destroy();
 private:
-    Else() {}
+    char _name;
+    Else() : _name('m') {}
     static Else* _instance;
 };
 class Rain: public Weather
 {
 public:
+    char getName() override {return _name;} ;
     static Rain* instance();
-    virtual Rain* transmute(Oxygen* oxygen) override;
-    virtual Rain* transmute(Ozone* ozone) override;
-    virtual Rain* transmute(CarbonDioxide* carbonDioxide) override;
+    Rain* change(Oxygen* oxygen,bool &l,unsigned i,std::vector<AirStratum*> &airStratum) override;
+    Rain* change(Ozone* ozone,bool &l,unsigned i,std::vector<AirStratum*> &airStratum) override;
+    Rain* change(CarbonDioxide* carbonDioxide,bool &l,unsigned i,std::vector<AirStratum*> &airStratum) override;
     static void destroy();
 private:
-    Rain() {}
+    Rain():_name('z') {}
     static Rain* _instance;
+    char _name;
 };
 class Sunny: public Weather
 {
 public:
+    char getName() override {return _name;} ;
     static Sunny* instance();
-    virtual Sunny* transmute(Oxygen* oxygen) override;
-    virtual Sunny* transmute(Ozone* ozone) override;
-    virtual Sunny* transmute(CarbonDioxide* carbonDioxide) override;
+    Sunny* change(Oxygen* oxygen,bool &l,unsigned i,std::vector<AirStratum*> &airStratum) override;
+    Sunny* change(Ozone* ozone,bool &l,unsigned i,std::vector<AirStratum*> &airStratum) override;
+    Sunny* change(CarbonDioxide* carbonDioxide,bool &l,unsigned i,std::vector<AirStratum*> &airStratum) override;
     static void destroy();
 private:
-    Sunny() {}
+    Sunny():_name('n') {}
     static Sunny* _instance;
+    char _name;
 };
 
 #endif // WEATHER_H
