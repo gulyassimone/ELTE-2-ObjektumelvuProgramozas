@@ -1,3 +1,6 @@
-Joska   lion    50  rhino   500
-Feri    rabbit  1
-Zsolti  elephant    20000   lion    70
+Joska   2000    lion    50  rhino   500
+Joska   2010    lion    50  rhino   500
+Feri    2001 rabbit  1
+Feri    2002 rabbit  1
+Feri    2003 rabbit  1  fox 3
+Zsolti  3000 elephant    20000   lion    70
