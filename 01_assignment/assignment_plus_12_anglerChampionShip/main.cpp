@@ -32,7 +32,7 @@ struct Angler
 };
 ostream& operator <<(ostream &os,const Angler &e)
 {
-    cout<< "verseny: " << e.competetiveId << " nev: " << e.name;
+    cout << " nev: " << e.name << " verseny: " << e.competetiveId;
     return os;
 }
 
