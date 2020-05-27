@@ -41,7 +41,10 @@
 		<Unit filename="inp5.txt" />
 		<Unit filename="inp6.txt" />
 		<Unit filename="inp7.txt" />
+<<<<<<< HEAD
 		<Unit filename="inp8.txt" />
+=======
+>>>>>>> ac44d80
 		<Unit filename="inp9.txt" />
 		<Unit filename="input.txt" />
 		<Unit filename="main.cpp" />
