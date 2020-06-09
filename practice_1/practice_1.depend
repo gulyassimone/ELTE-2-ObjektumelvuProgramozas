@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1591734318 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_1\main.cpp
+	<iostream>
+	"library/maxsearch.hpp"
+	"library/linsearch.hpp"
+	"library/seqinfileenumerator.hpp"
+	"library/stringstreamenumerator.hpp"
+
+1547545600 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_1\library\maxsearch.hpp
+	"procedure.hpp"
+
+1586937966 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_1\library\procedure.hpp
+	<cstddef>
+	"enumerator.hpp"
+	<iostream>
+	<vector>
+
+1502814430 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_1\library\enumerator.hpp
+
+1590769584 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_1\library\linsearch.hpp
+	"procedure.hpp"
+
+1560182796 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_1\library\seqinfileenumerator.hpp
+	<fstream>
+	<typeinfo>
+	<sstream>
+	"enumerator.hpp"
+
+1554937222 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_1\library\stringstreamenumerator.hpp
+	<typeinfo>
+	<sstream>
+	"enumerator.hpp"
+
