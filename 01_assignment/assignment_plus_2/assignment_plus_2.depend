@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1582454701 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_plus_2\src\complex.cpp
+	"Complex.h"
+
+1582454700 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_plus_2\include\complex.h
+
+1582474074 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_plus_2\main.cpp
+	<iostream>
+	"menu.h"
+
+1582478424 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_plus_2\complex.h
+	<iostream>
+	<math.h>
+
+1582480190 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_plus_2\menu.h
+	"complex.h"
+	<fstream>
+
+1582479546 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_plus_2\menu.cpp
+	"menu.h"
+	<iostream>
+	<fstream>
+

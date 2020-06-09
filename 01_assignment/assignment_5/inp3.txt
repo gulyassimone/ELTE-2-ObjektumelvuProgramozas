@@ -1,0 +1,4 @@
+customer1 product1 200000 product2 20000
+customer2 product3 2000
+customer3 product3 2000
+customer4 product3 2000

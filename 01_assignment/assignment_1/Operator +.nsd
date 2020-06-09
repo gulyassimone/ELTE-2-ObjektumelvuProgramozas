@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="&#34;Operator +&#34;" comment="" type="program" style="nice">
+ <children>
+
+<alternative text="getSize()!=m.getSize()" comment="" color="FFFFFF">
+ <qTrue>
+
+<instruction text="INVALID_OPERATION" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+<instruction text="sum.getSize(getSize())" comment="" color="FFFFFF" rotated="0"></instruction>
+<while text="i=0...getSize()-1" comment="" color="FFFFFF">
+ <qWhile>
+
+<while text="j=0..getSize()-1" comment="" color="FFFFFF">
+ <qWhile>
+
+<instruction text="&#34;ind=getVectorIndex(i,j)&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<alternative text="ind&#62;-1" comment="" color="FFFFFF">
+ <qTrue>
+
+<instruction text="&#34;sum._v[ind]=write(i,j)+m.write(i,j)&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+ </qWhile>
+</while>
+ </qWhile>
+</while>
+<instruction text="&#34;return sum&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+ </children>
+</root>

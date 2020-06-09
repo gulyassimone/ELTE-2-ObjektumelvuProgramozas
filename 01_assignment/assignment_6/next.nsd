@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="next()" comment="" type="program" style="nice">
+ <children>
+
+<instruction text="end=sx=abnorm" comment="" color="FFFFFF" rotated="0"></instruction>
+<alternative text="!end" comment="" color="FFFFFF">
+ <qTrue>
+
+<instruction text="&#34;act.food,act.price=dx,0&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<while text="&#34;sx=norm &#38;&#38; dx=act.food&#34;" comment="" color="FFFFFF">
+ <qWhile>
+
+<instruction text="act.price=act.price+dx.price" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;sx,dx,x:read&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qWhile>
+</while>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+ </children>
+</root>
