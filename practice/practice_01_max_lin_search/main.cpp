@@ -15,6 +15,7 @@ struct Data {
 istream& operator>>(istream& is, Data &e)
 {
     is >> e.date >> e.weigth >> e.distance;
+    cout << " date: " << e.date << " weight: " << e.weigth << " distance: " << e.distance;
     return is;
 }
 
@@ -33,8 +34,8 @@ istream& operator>>(istream& is, BlackHole &e)
     string line;
     getline(is, line);
     stringstream in(line);
-
     in >> e.name;
+    cout << "name: " << e.name;
 
     MyLinSearch p;
     StringStreamEnumerator<Data> enor(in);
@@ -43,12 +44,15 @@ istream& operator>>(istream& is, BlackHole &e)
     e.isCLosed = p.found();
     e.weigth = p.elem().weigth;
 
+    cout << " is closed " << e.isCLosed << endl;
+
     return is;
 }
 
 class myMaxSearch : public MaxSearch <BlackHole, int> {
 protected:
     int func(const BlackHole& e) const override { return e.weigth; }
+    bool cond(const BlackHole &e) const override { return e.isCLosed; }
 };
 
 int main(int argc, char* argv[])

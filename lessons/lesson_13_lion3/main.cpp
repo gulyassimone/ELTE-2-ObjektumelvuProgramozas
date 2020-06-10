@@ -14,6 +14,7 @@ struct Trophy {
 istream& operator>>(istream& is, Trophy &e)
 {
     is >> e.species >> e.weigth;
+    cout << " spieces: " <<e.species << " weight: " << e.weigth;
     return is;
 }
 
@@ -34,12 +35,14 @@ istream& operator>>(istream& is, Hunter &e)
     stringstream in(line);
 
     in >> e.name;
+    cout << "name: " << e.name;
 
     MyLinSearch p;
     StringStreamEnumerator<Trophy> enor(in);
     p.addEnumerator(&enor);
     p.run();
     e.haslion = p.found();
+    cout << " has lion " << e.haslion << endl;
 
     return is;
 }
