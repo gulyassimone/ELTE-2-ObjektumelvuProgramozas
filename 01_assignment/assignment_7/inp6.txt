@@ -1,6 +1,0 @@
-A   sugar   1   kg
-A   a   1   m
-B  k   1   kg
-B   a   1   m
-C  sugar   1   kg
-C  a   1   kg

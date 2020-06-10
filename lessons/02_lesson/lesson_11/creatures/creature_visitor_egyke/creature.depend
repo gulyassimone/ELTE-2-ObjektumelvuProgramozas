@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1545302981 source:c:\users\tibi\documents\oktat\oep\eloadasok\programok\08.testek_lények\lények\creature_visitor\ground.cpp
+	"ground.h"
+	"creature.h"
+
+1545302461 c:\users\tibi\documents\oktat\oep\eloadasok\programok\08.testek_lények\lények\creature_visitor\ground.h
+	<string>
+
+1545312574 c:\users\tibi\documents\oktat\oep\eloadasok\programok\08.testek_lények\lények\creature_visitor\creature.h
+	<string>
+	"ground.h"
+
+1545311339 source:c:\users\tibi\documents\oktat\oep\eloadasok\programok\08.testek_lények\lények\creature_visitor\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<exception>
+	"creature.h"
+
+1570343136 source:c:\users\tibi\documents\oktat\oep\eloadasok\programok\08.testek_lények\lények\creature_visitor_egyke\ground.cpp
+	"ground.h"
+	"creature.h"
+
+1585060079 c:\users\tibi\documents\oktat\oep\eloadasok\programok\08.testek_lények\lények\creature_visitor_egyke\ground.h
+	<string>
+
+1570343136 c:\users\tibi\documents\oktat\oep\eloadasok\programok\08.testek_lények\lények\creature_visitor_egyke\creature.h
+	<string>
+	"ground.h"
+
+1554718394 source:c:\users\tibi\documents\oktat\oep\eloadasok\programok\08.testek_lények\lények\creature_visitor_egyke\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<exception>
+	"creature.h"
+
+1545306582 source:f:\oep\lények\creature_visitor_egyke\ground.cpp
+	"ground.h"
+	"creature.h"
+
+1554032578 f:\oep\lények\creature_visitor_egyke\ground.h
+	<string>
+
+1554500634 f:\oep\lények\creature_visitor_egyke\creature.h
+	<string>
+	"ground.h"
+

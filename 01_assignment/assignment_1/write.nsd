@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<root text="write" comment="" type="program" style="nice">
- <children>
-
-<instruction text="&#34;int ind = getVectorIndex(i,j)&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
-<instruction text="&#34;return ind&#62;-1?_v[ind]:0&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
- </children>
-</root>

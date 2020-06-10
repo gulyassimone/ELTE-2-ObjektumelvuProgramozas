@@ -1,6 +1,0 @@
-jozsi   MEDVE   2
-karcsi  MEDVE   1
-karcsi  MEDVE   1
-Sanyi   MEDVE 100
-Sanyi   MEDVE 100
-

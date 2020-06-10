@@ -1,6 +1,0 @@
-A  C   1   kg
-A  sugar   1   kg
-B  X   1   kg
-B  sugar   1   kg
-B  X   1   kg
-B  sugar   1   kg

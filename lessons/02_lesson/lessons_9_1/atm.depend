@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1586947552 source:c:\users\tibi\documents\oktat\oep\gyakorlatok\08-11.gyakorlat\programok\tmp_atm\atm.cpp
+	"atm.h"
+	"customer.h"
+	"card.h"
+	"center.h"
+
+1585745636 c:\users\tibi\documents\oktat\oep\gyakorlatok\08-11.gyakorlat\programok\tmp_atm\atm.h
+	"card.h"
+
+1586977611 c:\users\tibi\documents\oktat\oep\gyakorlatok\08-11.gyakorlat\programok\tmp_atm\card.h
+	<string>
+	<vector>
+	<iostream>
+
+1585745552 c:\users\tibi\documents\oktat\oep\gyakorlatok\08-11.gyakorlat\programok\tmp_atm\customer.h
+	<string>
+	<vector>
+	"atm.h"
+
+1586947504 c:\users\tibi\documents\oktat\oep\gyakorlatok\08-11.gyakorlat\programok\tmp_atm\center.h
+	"bank.h"
+	<iostream>
+	<vector>
+
+1586946698 c:\users\tibi\documents\oktat\oep\gyakorlatok\08-11.gyakorlat\programok\tmp_atm\bank.h
+	"account.h"
+	"card.h"
+	<string>
+	<vector>
+
+1586968471 c:\users\tibi\documents\oktat\oep\gyakorlatok\08-11.gyakorlat\programok\tmp_atm\account.h
+	<string>
+	<vector>
+	"card.h"
+
+1586968371 source:c:\users\tibi\documents\oktat\oep\gyakorlatok\08-11.gyakorlat\programok\tmp_atm\bank.cpp
+	"bank.h"
+	"card.h"
+	<iostream>
+
+1586961911 source:c:\users\tibi\documents\oktat\oep\gyakorlatok\08-11.gyakorlat\programok\tmp_atm\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	"customer.h"
+	"center.h"
+
+1586968455 source:c:\users\tibi\documents\oktat\oep\gyakorlatok\08-11.gyakorlat\programok\tmp_atm\account.cpp
+	"account.h"
+

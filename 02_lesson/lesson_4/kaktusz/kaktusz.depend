@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1551956962 source:f:\oep\kaktusz\main.cpp
-	<iostream>
-	<fstream>
-	"catch.hpp"
-

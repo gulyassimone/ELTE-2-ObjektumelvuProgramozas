@@ -1,3 +1,0 @@
-Joska   lion 50     rhino 500
-Feri    rabbit 1
-Zsolti  elephant 2000 lion 70

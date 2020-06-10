@@ -1,8 +1,0 @@
-Kenya           2000 lion       120     male
-Kenya           2000 lion       120     male
-Kenya           2000 lion       120     male
-Kenya           2000 lion       120     female
-Rhodesia        1996 rhino      750     70
-Namibia         2011 lion       80      female
-South-Africa    2005 elephant   1200    80  90
-Sudan           2009 lion       150     male

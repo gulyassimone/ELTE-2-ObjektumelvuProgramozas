@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="main" comment="" type="program" style="nice">
+ <children>
+
+<instruction text="l=false" comment="" color="FFFFFF" rotated="0"></instruction>
+<while text="!end" comment="" color="FFFFFF">
+ <qWhile>
+
+<instruction text="&#34;l=l &#38;&#38; score.rich()&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qWhile>
+</while>
+ </children>
+</root>

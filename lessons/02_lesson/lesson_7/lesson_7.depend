@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1585767172 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\lesson_7\enor.cpp
+	"enor.h"
+
+1585767172 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\lesson_7\enor.h
+	<string>
+	<fstream>
+
+1585767187 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\lesson_7\main.cpp
+	<iostream>
+	"enor.h"
+
