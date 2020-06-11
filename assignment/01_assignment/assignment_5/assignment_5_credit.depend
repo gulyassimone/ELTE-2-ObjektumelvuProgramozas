@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1585403147 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\assignment_5_credit\main.cpp
+	<iostream>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+

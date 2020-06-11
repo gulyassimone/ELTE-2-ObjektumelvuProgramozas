@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="&#34; &#34;" comment="" type="program" style="nice">
+ <children>
+
+<instruction text="OrderList.first()" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="max=OrderList.current()" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="OrderList.next()" comment="" color="FFFFFF" rotated="0"></instruction>
+<while text="!OrderList.end()" comment="" color="FFFFFF">
+ <qWhile>
+
+<alternative text="OrderList.current().price&#62;max.price" comment="" color="FFFFFF">
+ <qTrue>
+
+<instruction text="max=OrcerList.current()" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+<instruction text="OrderList.next()" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qWhile>
+</while>
+ </children>
+</root>

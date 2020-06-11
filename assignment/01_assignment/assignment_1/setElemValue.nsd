@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="setElemValue" comment="" type="program" style="nice">
+ <children>
+
+<instruction text="&#34;ind = getVectorIndex(i,j)&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<alternative text="!(ind&#62;-1)" comment="" color="FFFFFF">
+ <qTrue>
+
+<instruction text="NULLPART" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+<instruction text="_v[ind]=data" comment="" color="FFFFFF" rotated="0"></instruction>
+ </children>
+</root>

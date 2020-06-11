@@ -1,0 +1,7 @@
+Andor
+12
+lion Afrika 2012.11.10 120 male
+rhino Afrika 2012.11.10 120 12
+lion Afrika 2012.11.10 120 female
+elephant Afrika 2012.11.10 120 31 12
+

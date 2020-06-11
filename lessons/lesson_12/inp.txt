@@ -1,0 +1,8 @@
+Kenya   2000    lion    120 male
+Kenya   2000    lion    120 male
+Kenya   2000    lion    120 female
+Namibia   2000    rhino    120 70
+South-Africa   2000    lion    120 female
+Sudan   2000    elephant    120 80 90
+
+

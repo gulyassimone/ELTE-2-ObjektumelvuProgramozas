@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="read" comment="" type="program" style="nice">
+ <children>
+
+<instruction text="credit.rich=true" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;sx,dx,x:read&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<while text="st=norm" comment="" color="FFFFFF">
+ <qWhile>
+
+<instruction text="&#34;credit.rich=credit.rich &#38;&#38; price&#62;20000&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;sx,dx,x:read&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qWhile>
+</while>
+ </children>
+</root>

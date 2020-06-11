@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1583081404 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-algoritmusokesadatszerkezetek_i\kódok\practice_3_associative_array\main.cpp
+	<iostream>
+	"menu.h"
+
+1583084378 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-algoritmusokesadatszerkezetek_i\kódok\practice_3_associative_array\associativearray.h
+	<vector>
+	<iostream>
+	"read.hpp"
+
+1535549132 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-algoritmusokesadatszerkezetek_i\kódok\practice_3_associative_array\read.hpp
+	<iostream>
+	<string>
+
+1583084405 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-algoritmusokesadatszerkezetek_i\kódok\practice_3_associative_array\associativearray.cpp
+	"associativeArray.h"
+
+1583083805 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-algoritmusokesadatszerkezetek_i\kódok\practice_3_associative_array\menu.cpp
+	"menu.h"
+	<iostream>
+	<sstream>
+	"read.hpp"
+
+1583083488 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-algoritmusokesadatszerkezetek_i\kódok\practice_3_associative_array\menu.h
+	"associativeArray.h"
+
+1583081404 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_3_associative_array\main.cpp
+	<iostream>
+	"menu.h"
+
+1583083488 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_3_associative_array\menu.h
+	"associativeArray.h"
+
+1583751327 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_3_associative_array\associativearray.h
+	<vector>
+	<iostream>
+	"read.hpp"
+
+1535549132 c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_3_associative_array\read.hpp
+	<iostream>
+	<string>
+
+1583746252 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_3_associative_array\associativearray.cpp
+	"associativeArray.h"
+
+1583750083 source:c:\users\simone gulyas\onedrive\dokumentumok\elte\2-fv\elte-2-objektumelvuprogramozas\kódok\practice_3_associative_array\menu.cpp
+	"menu.h"
+	<iostream>
+	<sstream>
+	"read.hpp"
+
